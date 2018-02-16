@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+    //conversão do código do typescript para JS    
+        "target": "es6",
+    //resultado da compilação vai cair dentro do app js
+        "outDir": "app/js",
+    //enquanto houver um erro no arquivo typescript, não irá gerar o arquivo JS
+        "noEmitOnError": true,
+    //ele não vai mais tipar implicitamente as varíaveis como any
+        "noImplicitAny": true,
+    //Não exibe os comentários na produção, só deixa no desenvolvimento
+        "removeComments": true,
+    //Carregar nossos módulos
+        "module": "system",
+    //Não deixa no código variáveis com o tipo null ou undefined
+        "strictNullChecks": true,
+    //Habilitar o uso de Decorators
+        "experimentalDecorators": true
+
+    },
+    //Arquivos que ele deve levar em consideração durante a compilação
+    //Compile todos os arquivos e subdiretórios da pasta js
+    "include": [
+        "app/ts/**/*"
+    ]
+}
